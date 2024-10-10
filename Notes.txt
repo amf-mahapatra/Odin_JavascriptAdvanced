@@ -1,1 +1,15 @@
 This is a new file to test connectivity with git.
+
+How to render a ttt game board = console.log('_|_|_' + '\n' + '_|_|_' + '\n' + ' | | ');
+
+How to add new entries to the gameboard
+
+How to enter new entry
+
+How to test for winning condition - any token has 3 rows
+
+Create a player - should have name, token, and score - method to change score and display score
+
+how to test if game is over, all squares selected - create an array or list with all square and remove them when selected, also check if a square is taken or not
+
+start with a game square object, pick who goes first, player selects a square, check if sqaure is available, if available assign square, if not available return false, check for win condition, check if board is full, ask other player
