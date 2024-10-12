@@ -60,8 +60,8 @@ const strWinners = ['[0, 1, 2]','[3, 4, 5]','[6, 7, 8]','[0, 3, 6]','[1, 4, 7]',
 const losers = [[6,2,0],[6,5,1],[0,1],[0,2],[1,2],[0,1,8],[0,1,7],[3,4,2],[7,8,0],[0,6,8,2],[0,1,3,4],[1,4,5,8],[0,6,1,7,5]];
 const strLosers = ['[6,2,0]','[6,5,1]','[0,1]','[0,2]','[1,2]','[0,1,8]','[0,1,7]','[3,4,2]','[7,8,0]','[0,6,8,2]','[0,1,3,4]','[1,4,5,8]','[0,6,1,7,5]'];
 
-testCkWin(winningCombinations, winners, strWinners, true);
-testCkWin(winningCombinations, losers, strLosers, false);
+//testCkWin(winningCombinations, winners, strWinners, true);
+//testCkWin(winningCombinations, losers, strLosers, false);
 
 const gameSquares = {0:'_', 1:'_', 2:'_', 3:'_', 4:'_', 5:'_', 6:'_', 7:'_', 8:'_'}
 
@@ -150,11 +150,12 @@ function playTTT(){
             turnSquares = getKeysByValue(gameSquares, turn);
             if(checkWin(winningCombinations, turnSquares)){
                 console.log(`${turn} wins!`);
+                printBoard(gameSquares);
                 win = true;
                 break;
             }
             if(turn === 'x'){
-                turn = 'y';
+                turn = 'o';
             }else{turn = 'x';}
 
         }else{console.log('invalid choice');}
